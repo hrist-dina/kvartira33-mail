@@ -1,0 +1,238 @@
+include data.pug
+include mixins.pug
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Monaco</title>
+	</head>
+	<body>
+		<center>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="font-family: 'Trebuchet MS', sans-serif;">
+				<tr>
+					<td align="center" valign="top">
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td align="center">
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td width=!{global.width} style="background: #bebebe; text-align: center; padding: 7px 0;">
+												<span style="color: #ffffff; font-size: 14px; font-weight: bold;">БЕСПЛАТНАЯ ПРИМЕРКА И ДОСТАВКА<sup>*</sup></span>
+											</td>
+										</tr>
+										<tr>
+											<td width=!{global.width} style="text-align: center; padding: 20px 0;">
+												<a target="_blank" href=!{"https://monacomoda.com/"+global.utm}>
+												<img style="display: block; margin: 0 auto;" border="0" src="https://monacomoda.com/media/img/mail/logo.png" alt="">
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td style="border-bottom: 1px solid #000000; padding: 15px 0; text-align: center; font-size: 16px;">
+												<a target="_blank" style="display: inline-block; color: #000000; text-decoration: none; margin: 0 2%; font-weight: bold;" href=!{"https://monacomoda.com/catalog/woman/novinki/"+global.utm}>НОВИНКИ</a>
+												<a target="_blank" style="display: inline-block; color: #000000; text-decoration: none; margin: 0 2%; font-weight: bold;" href=!{"https://monacomoda.com/forher/"+global.utm}>ДЛЯ НЕЁ</a>
+												<a target="_blank" style="display: inline-block; color: #000000; text-decoration: none; margin: 0 2%; font-weight: bold;" href=!{"https://monacomoda.com/forhim/"+global.utm}>ДЛЯ НЕГО</a>
+												<a target="_blank" style="display: inline-block; color: #000000; text-decoration: none; margin: 0 2%; font-weight: bold;" href=!{"https://monacomoda.com/catalog/brands/"+global.utm}>БРЕНДЫ</a>
+												<a target="_blank" style="display: inline-block; color: #000000; text-decoration: none; margin: 0 2%; font-weight: bold;" href=!{"https://monacomoda.com/catalog/woman/sale/"+global.utm}>SALE</a>
+											</td>
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 30px;">
+										<tr>
+											<td style="text-align: center; font-size: 32px; padding: 0 0 10px; line-height: 1.4;">
+												<img src="!{global.dateURL() + 'logo.png'}" style="max-width: 250px;">
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align: center; font-size: 22px; padding: 15px 0 0px; line-height: 1;">
+												<span style="">!{global.title}</span>
+											</td>
+										</tr>
+										<tr>
+										<td style="text-align: center; font-size: 16px; padding: 15px 0 0px; line-height: 1;">
+										<span style="font-size: 16px; color: #000000;">!{global.subtitle}</span>
+										</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table width=!{global.width} cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+							<tr>
+								<td valign="top" style="width: 50%; text-align: center; font-size: 14px; line-height: 1.8; padding-right: 10px;">
+									<img src=!{global.dateURL()+global.img1} alt="" style="width: 100%;">
+									//- <span style="display: inline-block; margin-top: 20px; font-weight: bold;">ОДЕЖДА</span>
+									//- <p style="padding: 0 20px; margin: 0;">БЛЕСТЯЩИЕ ИЗДЕЛИЯ ДЛЯ ГЛАВНОЙ НОЧИ ГОДА</p>
+									//- +buy
+								</td>
+								<td valign="top" style="width: 50%; text-align: center; font-size: 14px; line-height: 1.8; padding-left: 10px;">
+									<img src=!{global.dateURL()+global.img2} alt="" style="width: 100%;">
+									//- <span style="display: inline-block; margin-top: 20px; font-weight: bold;">ОБУВЬ И АКСЕССУАРЫ</span>
+									//- <p style="padding: 0 20px; margin: 0;">САМЫЕ СТИЛЬНЫЕ АКЦЕНТЫ В ОБРАЗЕ</p>
+									//- +buy
+								</td>
+							</tr>
+						</table>
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								+item(global.items[0])
+								+item(global.items[1])
+								+item(global.items[2])
+								+item(global.items[3])
+							</tr>
+						</table>
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>
+									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											+item(global.items[4])
+											+item(global.items[5])
+										</tr>
+										<tr>
+											+item(global.items[13])
+											+item(global.items[7])
+										</tr>
+									</table>
+								</td>
+								<td valign="top" width="50%">
+									<img src=!{global.dateURL()+global.img3} alt="" style="width: 100%;">
+								</td>
+							</tr>
+						</table>
+
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+							<tr>
+							+item(global.items[8])
+							+item(global.items[9])
+							+item(global.items[10])
+							+item(global.items[11])
+							</tr>
+						</table>
+
+						<table width="560" cellpadding="0" cellspacing="0" border="0" class="container">
+						<tbody><tr style="text-align: center;">
+						<td>
+						<p style="margin: 10px 0; color: #ff00e7;font-size: 22px;">В преддверии 14 февраля!</p>
+						</td>
+						</tr>
+						</tbody></table>
+
+						<table width="560" cellpadding="0" cellspacing="0" border="0" class="container">
+						<tbody><tr style="text-align: center;">
+						<td style="width: 100%; background: #fbf59c;font-size: 20px;color: rgb(106, 106, 106);text-transform: uppercase;line-height: 2.1;">
+						<p style="margin: 10px 0 0;">СКИДКА 15% НА ВСЕ НОВИНКИ</p>
+						</td>
+						</tr>
+						</tbody></table>
+
+						<table width="560" cellpadding="0" cellspacing="0" border="0" class="container">
+						<tbody><tr style="text-align: center; background: #fbf59c;">
+						<td style="width: 33%;">
+						</td>
+						<td style="width: 33%; background: white; padding: 10px;">
+						<span>782938748</span>
+						</td>
+						<td style="width: 33%;">
+						</td>
+						</tr>
+						</tbody></table>
+
+						<table width="560" cellpadding="0" cellspacing="0" border="0" class="container">
+						<tbody><tr style="text-align: center;">
+						<td style="width: 100%; background: #fbf59c;font-size: 20px; color: rgb(106, 106, 106);text-transform: uppercase;line-height: 2.1;">
+						<p style="margin: 10px 0 0;">ДЕЙСТВУЕТ 3 ДНЯ</p>
+						</td>
+						</tr>
+						</tbody></table>
+
+						<table width="560" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-bottom: 30px;">
+
+						<tbody><tr style="text-align: center; background: #fbf59c;">
+						<td style="width: 100%; background: #fbf59c;font-size: 20px; color: rgb(106, 106, 106);text-transform: uppercase;line-height: 2.1;">
+						<p></p>
+						</td>
+						</tr>
+
+						</tbody></table>
+
+						<table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
+						<tbody><tr style="text-align: center;">
+						<td style="width: 33%;"></td>
+						<td style="display: inline-block; text-align: center;"><a style="display: block; margin: 30px auto 50px; width: 174px; background: #232323; color: #ffffff; height: 40px; font-size: 16px; text-decoration: none; line-height: 40px; text-align: center;" href="https://monacomoda.com/?utm_source=email&utm_medium=email&utm_campaign=novinki&utm_content=sale-14-02">Начать шопинг</a></td>
+						<td style="width: 33%;"></td>
+						</tr>
+						</tbody></table>
+
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td valign="top" width="50%">
+									<img src=!{global.dateURL()+global.img4} alt="" style="width: 100%;">
+								</td>
+								<td>
+									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											+item(global.items[12])
+											+item(global.items[6])
+										</tr>
+										<tr>
+											+item(global.items[14])
+											+item(global.items[15])
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 15px 20px; border-top: 1px solid #000000;">
+							<tr>
+								<td style="text-align: left; font-size: 12px;">
+									<a href=!{"https://monacomoda.com/about/"+global.utm} target="_blank" style="color: #000000;">Мультибрендовый магазин </a>
+								</td>
+								<td style="text-align: center; font-size: 12px;">
+									<a href=!{"https://monacomoda.com/about/"+global.utm} target="_blank" style="color: #000000;">Более 24 мировых брендов</a>
+								</td>
+								<td style="text-align: right; font-size: 12px;">
+									<a href=!{"https://monacomoda.com/about/"+global.utm} target="_blank" style="color: #000000;">Предзаказ новых коллекций</a>
+								</td>
+							</tr>
+						</table>
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" bgcolor="#e3e3e3" style=" padding: 30px 20px;">
+							<tr>
+								<td style="vertical-align: middle;">
+									<a href=!{"https://monacomoda.com/"+global.utm}>
+									<img border="0" style="display: block;" src="https://monacomoda.com/media/img/mail/monaco-f.png" alt="">
+									</a>
+								</td>
+								<td align="center" style="vertical-align: middle;">
+									<a href="tel:88002504807" style="font-size: 20px; color: #000000; text-decoration: none; margin-bottom: 5px; display: inline-block;">8 800 250 48 07</a><br>
+									<a href=!{"https://monacomoda.com/"+global.utm} target="_blank" style="font-size: 16px; color: #000000;">monacomoda.com</a>
+								</td>
+								<td align="right" style="vertical-align: middle;">
+									<a href="https://www.instagram.com/monaco.cs/">
+									<img border="0" style="display: block;" src="https://monacomoda.com/media/img/mail/inst.png" alt="">
+									</a>
+								</td>
+							</tr>
+						</table>
+						<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
+							<tr>
+								<td>
+									<p style="margin: 10px 0 0; color: black; font-size: 12px;"><sup>*</sup>Заказы на сумму свыше 10 000 рублей доставляются бесплатно</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p style="margin: 10px 0 0; color: black; font-size: 12px;"><a href="{{unsubscribe_url}}" style="color: black;">Отписаться</a> и больше не получать от нас письма</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
