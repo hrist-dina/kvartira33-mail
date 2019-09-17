@@ -16,7 +16,6 @@ const ENV = {
 };
 
 gulp.task("html", () => {
-  console.log(this);
   return gulp
     .src("./dev/**/index.pug")
     .pipe(plumber())
@@ -64,11 +63,11 @@ gulp.task("libs", () => {
 // 		.pipe(gulp.dest('./public/js/'))
 // });
 //
-// gulp.task('img', () => {
-// 	return gulp.src('./dev/img/**/*.*')
-// 		.pipe($.imagemin())
-// 		.pipe(gulp.dest('./public/img/'))
-// });
+gulp.task('img', () => {
+	return gulp.src('./dev/img/**/*.*')
+		.pipe($.imagemin())
+		.pipe(gulp.dest('./public/img/'))
+});
 //
 // gulp.task('pictures', () => {
 // 	return gulp.src('./dev/pictures/**/*.*')
@@ -180,4 +179,4 @@ gulp.task("libs", () => {
 // 	});
 // });
 //
-gulp.task("default", gulp.parallel("html", "watch"));
+gulp.task("default", gulp.parallel("html", "img", "watch"));

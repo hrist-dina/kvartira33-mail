@@ -1,0 +1,171 @@
+include data.pug
+include ../../mixins.pug
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>!{global.title}</title>
+	</head>
+	<body>
+		<center>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="font-family: 'Trebuchet MS', sans-serif;">
+				<tr>
+					<td align="center" valign="top">
+						<table width=!{global.widthWrap} cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td align="center">
+									<table width=!{global.widthHead} cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td width=!{global.widthHead} style="background: #0db227; text-align: center; padding: 10px 0;">
+												<span style="color: #ffffff; font-size: 16px; font-weight: bold;">Интернет-магазин &laquo;Квартира&nbsp;33&raquo;</span>
+											</td>
+										</tr>
+										<tr>
+											<td width=!{global.widthHead} style="text-align: center; padding: 30px 0;">
+												<a target="_blank" href=!{global.host+"/"+global.utm}>
+												<img style="display: block; margin: 0 auto;" border="0" src="!{global.mediaURL + global.logo}" alt="">
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td style="border-bottom: 3px solid #646464; padding: 0 50px; text-align: center; font-size: 16px;">
+												for menu in global.menuLinks
+													<a target="_blank" style="display: inline-block; color: #646464; text-decoration: none; margin: 0 10px 16px; font-weight: bold;" href=!{global.host + menu.link + global.utm}>!{menu.name}</a>
+											</td>
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 50px;">
+										<tr>
+											<td style="text-align: center; font-size: 24px; font-weight: bold; line-height: 1;">
+												<span style="">!{global.title}</span>
+											</td>
+										</tr>
+										- if (global.subtitle) {
+										<tr>
+											<td style="text-align: center; font-size: 18px; font-weight: bold; padding: 10px 0 0px; line-height: 1;">
+												<span style="font-size: 16px; color: #000000;">!{global.subtitle}</span>
+											</td>
+										</tr>
+										- }
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table width=!{global.widthWrap} cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td align="center">
+									<table width=!{global.width - 35} cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+										<tr>
+											<td valign="top" style="width:330px; text-align: center; font-size: 14px; line-height: 1.8; padding-right: 10px;">
+												<img src=!{global.dateURL()+global.img1} alt="" style="width: 100%; border: 1px solid #000;">
+												//- <span style="display: inline-block; margin-top: 20px; font-weight: bold;">ОДЕЖДА</span>
+												//- <p style="padding: 0 20px; margin: 0;">БЛЕСТЯЩИЕ ИЗДЕЛИЯ ДЛЯ ГЛАВНОЙ НОЧИ ГОДА</p>
+												//- +buy
+											</td>
+											<td valign="top" style="width: 330px; text-align: center; font-size: 14px; line-height: 1.8; padding-left: 10px;">
+												<img src=!{global.dateURL()+global.img2} alt="" style="width: 100%; border: 1px solid #000;">
+												//- <span style="display: inline-block; margin-top: 20px; font-weight: bold;">ОБУВЬ И АКСЕССУАРЫ</span>
+												//- <p style="padding: 0 20px; margin: 0;">САМЫЕ СТИЛЬНЫЕ АКЦЕНТЫ В ОБРАЗЕ</p>
+												//- +buy
+											</td>
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											+item(global.items[0])
+											+item(global.items[1])
+											+item(global.items[2])
+											+item(global.items[3])
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 40px">
+										<tr>
+											<td>
+												<table width="100%" cellpadding="0" cellspacing="0" border="0">
+													<tr>
+														+item(global.items[4], 'padding: 0 4px 50px;')
+														+item(global.items[5], 'padding: 0 4px 50px;')
+													</tr>
+													<tr>
+														+item(global.items[6], 'padding: 0 4px 0;')
+														+item(global.items[7], 'padding: 0 4px 0;')
+													</tr>
+												</table>
+											</td>
+											<td valign="top" width="340px" style="padding-left: 10px">
+												<img src=!{global.dateURL()+global.img3} alt="" style="width: 100%; border: 1px solid #000;">
+											</td>
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											+item(global.items[8])
+											+item(global.items[9])
+											+item(global.items[10])
+											+item(global.items[11])
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 55px;">
+										<tr>
+											<td valign="top" width="340px" style="padding-right: 10px;">
+												<img src=!{global.dateURL()+global.img4} alt="" style="width: 100%; border: 1px solid #000;">
+											</td>
+											<td>
+												<table width="100%" cellpadding="0" cellspacing="0" border="0">
+													<tr>
+														+item(global.items[12], 'padding: 0 4px 50px;')
+														+item(global.items[13], 'padding: 0 4px 50px;')
+													</tr>
+													<tr>
+														+item(global.items[14], 'padding: 0 4px 0;')
+														+item(global.items[15], 'padding: 0 4px 0;')
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td style="text-align: center; font-size: 18px;">
+												<a href=!{global.host + "/" + global.buttonLink + "/" + global.utm} target="_blank" style="width: 400px; margin: 0 auto 30px; display:block; background: #b7b7b7; padding: 20px; color: #fff; font-weight: bold; text-decoration: none;">Перейти</a>
+											</td>
+										</tr>
+									</table>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 30px 20px;">
+										<tr>
+											<td style="width: 50%; vertical-align: middle; padding-right: 45px;">
+												<a href=!{global.host+"/"+global.utm}>
+												<img border="0" style="width: 330px; display: block;" src="!{global.mediaURL + global.logoFooter}" alt="">
+												</a>
+											</td>
+											<td style="width: 50%; vertical-align: middle;">
+												<a href="tel:+73433511954" style="font-size: 22px; color: #000000; text-decoration: none; margin-bottom: 5px; display: inline-block;">+7 (343) 351-19-54</a><br>
+												<a href=!{global.host+"/"+global.utm} target="_blank" style="font-size: 22px; color: #000000; text-decoration: none;">Kvartira33.ru</a>
+											</td>
+										</tr>
+									</table>
+									//-<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
+										<tr>
+											<td>
+												<p style="margin: 10px 0 0; color: black; font-size: 12px;"><sup>*</sup>Заказы на сумму свыше 10 000 рублей доставляются бесплатно</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p style="margin: 10px 0 0; color: black; font-size: 12px;"><a href="{{unsubscribe_url}}" style="color: black;">Отписаться</a> и больше не получать от нас письма</p>
+											</td>
+										</tr>
+									//-</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
