@@ -37,46 +37,73 @@ include ../../mixins.pug
 											</td>
 										</tr>
 									</table>
-									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 50px;">
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 20px; border-bottom: 10px solid #0db227;">
 										<tr>
-											<td style="text-align: center; font-size: 24px; font-weight: bold; line-height: 1;">
+											<td style="text-align: center; font-size: 24px; font-weight: bold; color: #505050; line-height: 1;">
 												<span style="">!{global.title}</span>
 											</td>
 										</tr>
-										- if (global.subtitle) {
-										<tr>
-											<td style="text-align: center; font-size: 18px; font-weight: bold; padding: 10px 0 0px; line-height: 1;">
-												<span style="color: #000000;">!{global.subtitle}</span>
-											</td>
-										</tr>
-										- }
 									</table>
 								</td>
 							</tr>
 						</table>
+						<table cellpadding="0" cellspacing="0" width="775" style="background-color: #d1d1d1; border-top: 20px solid #eaf3f5; margin: 0 auto;">
+						<tbody>
+						<tr>
+							<td width="775" bgcolor="#f7f7f7" valign="top" style="border: none; padding-top: 0; padding-right: 44px; padding-bottom: 16px; padding-left: 44px;">
+								<p style="margin-top:30px; margin-bottom: 28px; font-weight: bold; font-size: 19px;">
+									| Здравствуйте, [имя покупателя]!
+								</p>
+								<p style="margin-top: 0; margin-bottom: 20px; line-height: 20px;">
+									| Ваш заказ № [номер], от [дата] на сайте
+									| 
+									+link("https://www.kvartira33.ru/", "kvartira33.ru ")
+									| принят.
+								</p>
+								p
+									b  Информация о покупателе:
+								p
+									| Email: [ ]
+								p
+									| Телефон: [ ]
+								p
+									| Способ оплаты: [ ]
+								p
+									| Способ доставки: [ ]
+								p(style="margin-top: 25px; margin-bottom: 20px;")
+									b  Товары в заказе:
+								
+								<table width=!{global.width - 90} cellpadding="0" cellspacing="0" border="0">	
+									+itemRow(global.items[0])
+									+itemRow(global.items[1])
+									+itemRow(global.items[2])
+									//-+itemRow(global.items[3])
+								</table>
+							
+								p
+									b Товаров на сумму: [общая сумма] р.
+								p
+									| Дополнительную информацию по заказу уточняйте по телефону
+									|
+									+link("tel:+73433511954", "+7 (343) 351-19-54")
+									|.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td height="40px" width="775" bgcolor="#f7f7f7" valign="top" style="border: none; padding-top: 0; padding-right: 44px; padding-bottom: 30px; padding-left: 44px;">
+								<p style="border-top: 1px solid #d1d1d1; margin-bottom: 5px; margin-top: 0; padding-top: 20px; line-height:21px;">
+									| С уважением, команда интернет-магазина Квартира 33<br>
+									| E-mail: 
+									+link("mailto:", "Email")
+								</p>
+							</td>
+						</tr>
+						</tbody>
+						</table>
 						<table width=!{global.widthWrap} cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
 							<tr>
 								<td align="center">
-									<table width=!{global.width - 30} cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
-										<tr>
-											<td valign="top" style="width: 100%; text-align: center; font-size: 14px; line-height: 1.8;">
-												<img src=!{global.dateURL()+global.img1} alt="" style="width: 100%; border: 1px solid #000;">
-											</td>
-										</tr>
-									</table>
-									<table width="775" cellpadding="0" cellspacing="0" border="0">	
-										+itemRow(global.items[0])
-										+itemRow(global.items[1])
-										+itemRow(global.items[2])
-										//-+itemRow(global.items[3])
-									</table>
-									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0">
-										<tr>
-											<td style="text-align: center; font-size: 18px;">
-												<a href=!{global.host + "/" + global.buttonLink + "/" + global.utm} target="_blank" style="width: 400px; margin: 20px auto 30px; display:block; background: #b7b7b7; padding: 20px; color: #fff; font-weight: bold; text-decoration: none;">Перейти</a>
-											</td>
-										</tr>
-									</table>
 									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="padding: 30px 20px;">
 										<tr>
 											<td style="width: 50%; vertical-align: middle; padding-right: 45px;">
@@ -90,18 +117,13 @@ include ../../mixins.pug
 											</td>
 										</tr>
 									</table>
-									//-<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
-										<tr>
-											<td>
-												<p style="margin: 10px 0 0; color: black; font-size: 12px;"><sup>*</sup>Заказы на сумму свыше 10 000 рублей доставляются бесплатно</p>
-											</td>
-										</tr>
+									<table width=!{global.width} cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
 										<tr>
 											<td>
 												<p style="margin: 10px 0 0; color: black; font-size: 12px;"><a href="{{unsubscribe_url}}" style="color: black;">Отписаться</a> и больше не получать от нас письма</p>
 											</td>
 										</tr>
-									//-</table>
+									</table>
 								</td>
 							</tr>
 						</table>
