@@ -52,36 +52,10 @@ include ../../mixins.pug
 						<tr>
 							<td width="775" bgcolor="#f7f7f7" valign="top" style="border: none; padding-top: 0; padding-right: 44px; padding-bottom: 16px; padding-left: 44px;">
 								<p style="margin-top:30px; margin-bottom: 28px; font-weight: bold; font-size: 19px;">
-									| Здравствуйте, [имя покупателя]!
+									| Изменен статус заказа № [номер] от [дата]
 								</p>
 								<p style="margin-top: 0; margin-bottom: 20px; line-height: 20px;">
-									| Ваш заказ № [номер], от [дата] на сайте
-									| 
-									+link("https://www.kvartira33.ru/", "kvartira33.ru ")
-									| принят.
-								</p>
-								p
-									b  Информация о покупателе:
-								p
-									| Email: [ ]
-								p
-									| Телефон: [ ]
-								p
-									| Способ оплаты: [ ]
-								p
-									| Способ доставки: [ ]
-								p(style="margin-top: 25px; margin-bottom: 20px;")
-									b  Товары в заказе:
-								
-								<table width=!{global.width - 90} cellpadding="0" cellspacing="0" border="0">	
-									+itemRow(global.items[0])
-									+itemRow(global.items[1])
-									+itemRow(global.items[2])
-									//-+itemRow(global.items[3])
-								</table>
-							
-								p
-									b Товаров на сумму: [общая сумма] р.
+									| Новый статус заказа: [статус]
 								p
 									| Дополнительную информацию по заказу уточняйте по телефону
 									|
